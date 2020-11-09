@@ -12,6 +12,11 @@ public class Predator {
     private Vision m_Vision;
     private Smellling m_Smelling;
 
+    public Predator() {
+        int age = 0;
+        age += 1;
+    }
+
 
     void hunt(Prey p_Prey) { }
 
