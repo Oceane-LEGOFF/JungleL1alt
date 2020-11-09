@@ -1,24 +1,25 @@
 package com.company;
 
 public class Prey {
-    private int AgeNow;
-    private int AgeMax;
-    private static final int AgeAll = 30;
+    private static int s_iMaxPreyAge = 30;
+    private int m_iAgeMax;
+    private int m_iAge;
 
-    private int NbLifePointsNow;
-    private int NbLifePointsMax;
-    private static final int NbLifePointsAll = 70;
+    private static int s_iMaxPreyLifePoint = 70;
+    private int m_iLifePointMax;
+    private int m_iLifePoint;
 
-    private Smellling smellling;
-    private Vision vision;
+    private Vision m_Vision;
+    private Hearing m_Hearing;
 
-    void moveToFeed(Plant plant) { }
 
-    void eat(Plant plant) { }
+    void moveToFeed(Plant p_Plant) { }
 
-    void drink(WaterSpot waterSpot) { }
+    void eat(Plant p_Plant) { }
 
-    void flee(Predator predator) { }
+    void drink(WaterSpot p_WaterSpot) { }
 
-    void mate(Prey prey) { }
+    void flee(Predator p_Predator) { }
+
+    void mate(Prey p_Prey) { }
 }
