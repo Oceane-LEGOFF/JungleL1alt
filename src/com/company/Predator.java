@@ -1,32 +1,44 @@
 package com.company;
 
 public class Predator {
-    private static int s_iMaxPredatorAge = 40;
+    private static final int s_iDrinkingQuantity = 3;
+
+
+    private static final int s_iMaxPredatorAge = 40;
     private int m_iAgeMax;
     private int m_iAge;
 
-    private static int s_iMaxPredatorLifePoint = 120;
+    private static final int s_iMaxPredatorLifePoint = 120;
     private int m_iLifePointMax;
     private int m_iLifePoint;
 
     private Vision m_Vision;
-    private Smellling m_Smelling;
+    private Smelling m_Smelling;
+    private Coords m_Coords;
 
-    public Predator() {
-        int age = 0;
-        age += 1;
+    void hunt(Prey p_Prey) {
     }
 
+    Coords move() {
+        Coords coords = new Coords();
+        //Code pour déterminer les nouvelles coordonnées
+        //par exemple le but à atteindre
 
-    void hunt(Prey p_Prey) { }
+        return coords;
+    }
 
-    void move() { }
+    void mate(Predator p_Predator) {
+    }
 
-    void mate(Predator p_Predator) { }
+    void eat(Prey p_Prey) {
+    }
 
-    void eat(Plant plant) { }
+    void drink(WaterSpot p_WaterSpot) {
+        int waterAvailable = p_WaterSpot.getWaterForDrink(s_iDrinkingQuantity);
 
-    void drink(WaterSpot p_WaterSpot) { }
+    }
 
-
+    public void update() {
+        drink(Ecosystem.getInstance().getWaterSpot());
+    }
 }
